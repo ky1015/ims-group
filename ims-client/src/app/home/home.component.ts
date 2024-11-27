@@ -7,13 +7,33 @@ import { environment } from '../../environments/environment';
   standalone: true,
   imports: [],
   template: `
-    <h2>Main Content</h2>
-    <p>This is a basic layout for your MEAN stack project.</p>
+    <div class= "page-header">
+      <h2>Home Page</h2>
+    </div>
+    <div class="home-wrapper">
+      <h4> Welcome to your inventory management! <h4>
+        <div class="home-link"><a href="/items">Items</a></div>
+        <div class="home-link"><a href="/suppliers">Suppliers</a></div>
     <p><strong>Server message:</strong> {{ serverMessage }}</p>
   `,
-  styles: ``
+  styles: `
+  .home-wrapper {
+    display: block;
+  }
+
+  .home-link {
+    display: inline-block;
+    height: 120px;
+    width: 200px;
+    background: #D8AEF0;
+    margin: 10px;
+    text-align: center;
+    padding-top: 80px;
+  }
+  `
 })
 export class HomeComponent {
+
   serverMessage: string;
 
   constructor(private http: HttpClient) {

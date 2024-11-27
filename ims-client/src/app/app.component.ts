@@ -7,16 +7,9 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <div class="container">
-      <header>
-        <h1>Welcome to the MEAN Stack Starter Project</h1>
-      </header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="top-banner">
+      <h1><a href="#">Inventory Management System</a></h1>
+    </div>
       <main>
         <section>
           <router-outlet />
@@ -55,8 +48,24 @@ import { RouterOutlet } from '@angular/router';
     main {
       flex: 1;
     }
+    .top-banner {
+      background: #D8AEF0;
+      height: 75px;
+    }
+
+    .top-banner h1 {
+      font-family: "Old Standard TT", serif;
+      text-align: center;
+    }
+
+    .top-banner a {
+      text-decoration: none;
+      color: black;
+    }
   `
 })
 export class AppComponent {
   title = 'ets-client';
+
+  bannerText= '';
 }

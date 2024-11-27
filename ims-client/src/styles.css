@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*
+Style Guide:
+
+Theme Colors:
+  Light Purple: #D8AEF0
+  Dark Purple: #976DD0
+  Gray: #47525E
+  Red: #F81E22
+
+Fonts
+  Old Standard TT is a Serif font for headers
+  DM Sans is a Sans Serif font for normal text
+  DM Mono is a Monospace font for error messages
+*/
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -6,3 +21,8 @@ body {
   height: 100%;
 }
 
+.page-header {
+  font-family: "Old Standard TT";
+  text-align: left;
+  margin: 15px;
+}
